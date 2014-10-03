@@ -57,7 +57,7 @@ app.post('/public/js', function (req, res) {
             console.log('Message sent: ' + info.response);
         }
     });
-
+//TEST
 });
 app.use('/public', express.static('public'));
 
