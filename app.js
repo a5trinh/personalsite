@@ -5,7 +5,7 @@ var express = require('express'),
 app = express();
 
 var bodyParser = require('body-parser')
-app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({
     extended: false
 }))
@@ -49,7 +49,7 @@ app.post('/public/js', function (req, res) {
         html: '<p> From: ' + req.body.email + "<br>Phone Number: " + req.body.phone + "<br><br>Message: " + req.body.message + '</p>' // html body
     };
 
-    // send mail with defined transport object
+   
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
